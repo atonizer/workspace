@@ -1,0 +1,20 @@
+package edu.java.cls;
+
+import java.util.HashMap;
+
+public class LoginServ {
+	
+	static HashMap<String, String> users = new HashMap();
+	
+	public LoginServ(){
+		users.put("jhn", "John");
+		users.put("de", "Doe");
+	}
+	
+	public boolean authenticate(String userID, String password){
+		if(password == null || password.trim()== ""){
+			return false;
+		}
+		return true;
+	}
+}
