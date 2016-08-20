@@ -1,9 +1,0 @@
-package edu.java.cls;
-
-public class LoginServ {
-	public boolean authenticate(String userID, String password){
-		if(password == null || password.trim()== ""){
-			
-		}
-	}
-}
