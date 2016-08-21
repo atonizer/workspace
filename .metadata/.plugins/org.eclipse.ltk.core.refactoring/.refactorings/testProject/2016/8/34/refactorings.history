@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;testProject/WebContent/initMethodjsp.jsp&apos; to &apos;initMethod.jsp&apos;" description="Rename resource &apos;initMethodjsp.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/initMethodjsp.jsp" name="initMethod.jsp" stamp="1471607311449" updateReferences="true"/>
-</session>

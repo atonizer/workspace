@@ -1,69 +1,24 @@
-!SESSION 2016-08-20 17:11:55.908 -----------------------------------------------
+!SESSION 2016-08-21 08:49:42.442 -----------------------------------------------
 eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_102
+java.version=1.8.0_91
 java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
 Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.osgi 2 0 2016-08-20 17:15:56.422
-!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-1,5,main]" timed out waiting (5005ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.4.0.201606070830-r [277]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
-!STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.4.0.201606070830-r"; singleton:="true" [id=277] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	... 13 more
-Root exception:
-java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 17:17:35.470
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-08-20 17:17:54.058
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-08-21 08:51:10.505
 !MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Read timed out. ; version: 2.0.1.v20160605-1811
 !STACK 0
 java.net.SocketTimeoutException: Read timed out
 	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at sun.security.ssl.InputRecord.readFully(Unknown Source)
-	at sun.security.ssl.InputRecord.read(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
-	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
 	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
 	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
 	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
@@ -87,802 +42,471 @@ java.net.SocketTimeoutException: Read timed out
 	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
 	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
-	at java.lang.Thread.run(Unknown Source)
-!SESSION 2016-08-20 17:46:54.099 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_102
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+	at java.lang.Thread.run(Thread.java:745)
 
-!ENTRY org.eclipse.osgi 2 0 2016-08-20 17:50:25.970
-!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-2,5,main]" timed out waiting (5014ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.4.0.201606070830-r [277]". To avoid deadlock, thread "Thread[Worker-2,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
-!STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.egit.ui"; type="osgi.bundle"; version:Version="4.4.0.201606070830-r"; singleton:="true" [id=277] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	... 13 more
-Root exception:
-java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 17:52:05.813
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-08-20 17:52:27.446
-!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Read timed out. ; version: 2.0.1.v20160605-1811
-!STACK 0
-java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at sun.security.ssl.InputRecord.readFully(Unknown Source)
-	at sun.security.ssl.InputRecord.read(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
-	at sun.security.ssl.AppInputStream.read(Unknown Source)
-	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
-	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
-	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
-	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
-	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
-	at java.lang.Thread.run(Unknown Source)
-
-!ENTRY org.eclipse.wst.server.discovery 1 0 2016-08-20 17:52:38.148
+!ENTRY org.eclipse.wst.server.discovery 1 0 2016-08-21 08:52:02.333
 !MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
 
-!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-08-20 17:52:55.817
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-08-21 08:52:22.159
 !MESSAGE Invalid site reference %updateSiteURL in feature com.pramati.eclipse.feature.
 
-!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-08-20 17:52:56.059
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-08-21 08:52:22.161
 !MESSAGE Invalid site reference %updateSiteURL in feature com.pramati.eclipse.feature.
 
-!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-08-20 17:52:56.163
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-08-21 08:52:22.162
 !MESSAGE Invalid site reference %updateSiteURL in feature com.pramati.eclipse.feature.
 
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-08-20 17:55:11.137
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v8.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 18:39:17.100
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 18:39:17.138
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 18:40:39.636
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 18:40:39.641
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-!SESSION 2016-08-20 19:20:18.736 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_102
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.osgi 2 0 2016-08-20 19:21:44.419
-!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-0,5,main]" timed out waiting (5126ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.4.0.201606070830-r [277]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:10.506
+!MESSAGE Publishing the configuration...
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:10.506
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/catalina.policy: /usr/share/tomcat8/backup/catalina.policy (No such file or directory)
 !STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="4.4.0.201606070830-r"; osgi.identity="org.eclipse.egit.ui"; singleton:="true" [id=277] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/catalina.policy (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	... 13 more
-Root exception:
-java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:10.507
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/catalina.properties: /usr/share/tomcat8/backup/catalina.properties (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/catalina.properties (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 19:23:01.905
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-08-20 19:23:26.131
-!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Read timed out. ; version: 2.0.1.v20160605-1811
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:10.507
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/context.xml: /usr/share/tomcat8/backup/context.xml (No such file or directory)
 !STACK 0
-java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at sun.security.ssl.InputRecord.readFully(Unknown Source)
-	at sun.security.ssl.InputRecord.read(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
-	at sun.security.ssl.AppInputStream.read(Unknown Source)
-	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
-	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
-	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
-	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
-	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
-	at java.lang.Thread.run(Unknown Source)
-!SESSION 2016-08-20 19:50:03.462 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_102
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 19:51:45.536
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-08-20 19:52:01.257
-!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Read timed out. ; version: 2.0.1.v20160605-1811
-!STACK 0
-java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at sun.security.ssl.InputRecord.readFully(Unknown Source)
-	at sun.security.ssl.InputRecord.read(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
-	at sun.security.ssl.AppInputStream.read(Unknown Source)
-	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
-	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
-	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
-	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
-	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
-	at java.lang.Thread.run(Unknown Source)
-!SESSION 2016-08-20 19:55:32.655 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_102
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.osgi 2 0 2016-08-20 19:56:50.202
-!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-0,5,main]" timed out waiting (5051ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.4.0.201606070830-r [277]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
-!STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="4.4.0.201606070830-r"; osgi.identity="org.eclipse.egit.ui"; singleton:="true" [id=277] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/context.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	... 13 more
-Root exception:
-java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:10.508
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/server.xml: /usr/share/tomcat8/backup/server.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/server.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:10.509
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/tomcat-users.xml: /usr/share/tomcat8/backup/tomcat-users.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/tomcat-users.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:10.509
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/web.xml: /usr/share/tomcat8/backup/web.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/web.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 19:58:35.925
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-08-20 19:58:59.282
-!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Read timed out. ; version: 2.0.1.v20160605-1811
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:34.040
+!MESSAGE Publishing the configuration...
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:34.040
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/catalina.policy: /usr/share/tomcat8/backup/catalina.policy (No such file or directory)
 !STACK 0
-java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at sun.security.ssl.InputRecord.readFully(Unknown Source)
-	at sun.security.ssl.InputRecord.read(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
-	at sun.security.ssl.AppInputStream.read(Unknown Source)
-	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
-	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
-	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
-	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
-	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
-	at java.lang.Thread.run(Unknown Source)
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 19:59:38.101
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 19:59:38.127
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 19:59:38.412
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 19:59:38.417
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-08-20 20:01:11.052
-!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v8.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 20:24:02.807
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 20:24:02.818
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 20:24:03.488
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 20:24:03.501
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.recommenders.models.rcp 1 9 2016-08-20 20:25:39.489
-!MESSAGE The model index service was accessed either before it started or after it finished running.
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/catalina.policy (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:34.040
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/catalina.properties: /usr/share/tomcat8/backup/catalina.properties (No such file or directory)
 !STACK 0
-org.eclipse.recommenders.utils.Logs$LogTraceException
-	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
-	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
-	at org.eclipse.recommenders.utils.Logs.log(Logs.java:126)
-	at org.eclipse.recommenders.internal.models.rcp.EclipseModelIndex.suggest(EclipseModelIndex.java:212)
-	at org.eclipse.recommenders.models.SimpleModelProvider.acquireModel(SimpleModelProvider.java:70)
-	at org.eclipse.recommenders.models.PoolingModelProvider.access$0(PoolingModelProvider.java:1)
-	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:96)
-	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:1)
-	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
-	at org.eclipse.recommenders.models.PoolingModelProvider.acquireModel(PoolingModelProvider.java:67)
-	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:65)
-	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
-	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/catalina.properties (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:34.041
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/context.xml: /usr/share/tomcat8/backup/context.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/context.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:34.041
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/server.xml: /usr/share/tomcat8/backup/server.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/server.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:34.041
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/tomcat-users.xml: /usr/share/tomcat8/backup/tomcat-users.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/tomcat-users.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:57:34.041
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/web.xml: /usr/share/tomcat8/backup/web.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/web.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.eclipse.wst.xml.ui 4 4 2016-08-20 20:54:16.868
-!MESSAGE null
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:58:21.316
+!MESSAGE Publishing the configuration...
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:58:21.317
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/catalina.policy: /usr/share/tomcat8/backup/catalina.policy (No such file or directory)
 !STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.wst.sse.core.internal.text.GenericPositionManager.addPosition(GenericPositionManager.java:84)
-	at org.eclipse.wst.sse.core.internal.text.GenericPositionManager.addPosition(GenericPositionManager.java:69)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.addPosition(BasicStructuredDocument.java:859)
-	at org.eclipse.jface.text.link.LinkedModeUI.setExitPosition(LinkedModeUI.java:747)
-	at org.eclipse.jface.text.link.LinkedModeUI.setExitPosition(LinkedModeUI.java:766)
-	at org.eclipse.wst.xml.ui.internal.contentassist.MarkupCompletionProposal.getLinkedPositions(MarkupCompletionProposal.java:101)
-	at org.eclipse.wst.xml.ui.internal.contentassist.MarkupCompletionProposal.apply(MarkupCompletionProposal.java:52)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.insertProposal(CompletionProposalPopup.java:987)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.insertSelectedProposalWithMask(CompletionProposalPopup.java:936)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$27(CompletionProposalPopup.java:932)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$5.widgetDefaultSelected(CompletionProposalPopup.java:677)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:120)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4228)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3816)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
-
-!ENTRY org.eclipse.wst.xml.ui 4 4 2016-08-20 20:54:27.203
-!MESSAGE null
-!STACK 0
-org.eclipse.jface.text.BadLocationException
-	at org.eclipse.wst.sse.core.internal.text.GenericPositionManager.addPosition(GenericPositionManager.java:84)
-	at org.eclipse.wst.sse.core.internal.text.GenericPositionManager.addPosition(GenericPositionManager.java:69)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.addPosition(BasicStructuredDocument.java:859)
-	at org.eclipse.jface.text.link.LinkedModeUI.setExitPosition(LinkedModeUI.java:747)
-	at org.eclipse.jface.text.link.LinkedModeUI.setExitPosition(LinkedModeUI.java:766)
-	at org.eclipse.wst.xml.ui.internal.contentassist.MarkupCompletionProposal.getLinkedPositions(MarkupCompletionProposal.java:101)
-	at org.eclipse.wst.xml.ui.internal.contentassist.MarkupCompletionProposal.apply(MarkupCompletionProposal.java:52)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.insertProposal(CompletionProposalPopup.java:987)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.insertSelectedProposalWithMask(CompletionProposalPopup.java:936)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.verifyKey(CompletionProposalPopup.java:1386)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$InternalListener.verifyKey(ContentAssistant.java:803)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:485)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:66)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6044)
-	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5733)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1130)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1126)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1547)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4910)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:364)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4791)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5102)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2552)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3814)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 20:57:01.285
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 20:57:01.292
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-<<<<<<< HEAD
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 07:07:31.857
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 07:07:31.924
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY unknown 4 0 2016-08-19 07:14:37.966
-!MESSAGE Execution of 'dbus-send --print-reply --dest=org.freedesktop.FileManager1 /org/freedesktop/FileManager1 org.freedesktop.FileManager1.ShowItems array:string:"file:/home/user/Projects/workspace/testProject/WebContent/firstJspFile.jsp" string:""' failed with return code: 1
-
-!ENTRY unknown 4 0 2016-08-19 07:16:03.582
-!MESSAGE Execution of 'dbus-send --print-reply --dest=org.freedesktop.FileManager1 /org/freedesktop/FileManager1 org.freedesktop.FileManager1.ShowItems array:string:"file:/home/user/Projects/workspace/testProject/WebContent/firstJspFile.jsp" string:""' failed with return code: 1
-!SESSION 2016-08-19 11:31:29.138 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 11:34:41.204
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 11:34:41.229
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 11:36:10.434
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 11:36:10.435
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.ui.browser 2 0 2016-08-19 11:40:41.379
-!MESSAGE Internal browser is not available: No more handles [Browser style SWT.MOZILLA and Java system property org.eclipse.swt.browser.DefaultType=mozilla are not supported with GTK 3 as XULRunner is not ported for GTK 3 yet]
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 11:50:09.117
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 11:50:09.117
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 11:55:42.875
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 11:55:42.877
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 13:25:39.729
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-19 13:25:39.737
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-!SESSION 2016-08-19 14:05:37.365 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.ui.browser 2 0 2016-08-19 14:06:40.146
-!MESSAGE Internal browser is not available: No more handles [Browser style SWT.MOZILLA and Java system property org.eclipse.swt.browser.DefaultType=mozilla are not supported with GTK 3 as XULRunner is not ported for GTK 3 yet]
-!SESSION 2016-08-20 03:58:56.583 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 04:00:04.214
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 04:00:04.222
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 04:01:27.808
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 04:01:27.809
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.ui.browser 2 0 2016-08-20 04:05:05.564
-!MESSAGE Internal browser is not available: No more handles [Browser style SWT.MOZILLA and Java system property org.eclipse.swt.browser.DefaultType=mozilla are not supported with GTK 3 as XULRunner is not ported for GTK 3 yet]
-!SESSION 2016-08-20 05:26:01.174 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 05:29:29.124
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 05:29:29.146
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 05:29:29.261
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 05:29:29.262
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.ui.browser 2 0 2016-08-20 05:35:34.409
-!MESSAGE Internal browser is not available: No more handles [Browser style SWT.MOZILLA and Java system property org.eclipse.swt.browser.DefaultType=mozilla are not supported with GTK 3 as XULRunner is not ported for GTK 3 yet]
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 06:01:23.994
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 06:01:24.001
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 06:02:53.849
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-20 06:02:53.850
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-!SESSION 2016-08-21 05:32:38.855 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.osgi 2 0 2016-08-21 05:33:28.492
-!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-0,5,main]" timed out waiting (5213ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.4.0.201606070830-r [276]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
-!STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="4.4.0.201606070830-r"; osgi.identity="org.eclipse.egit.ui"; singleton:="true" [id=276] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/catalina.policy (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	... 13 more
-Root exception:
-java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-!SESSION 2016-08-21 05:40:34.332 -----------------------------------------------
-eclipse.buildId=4.6.0.I20160606-1100
-java.version=1.8.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
-Framework arguments:  -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.osgi 2 0 2016-08-21 05:41:20.889
-!MESSAGE While loading class "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1", thread "Thread[Worker-0,5,main]" timed out waiting (5098ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.egit.ui_4.4.0.201606070830-r [276]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "org.eclipse.egit.ui.internal.ConfigurationChecker$1$1" may not be fully initialized.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:58:21.317
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/catalina.properties: /usr/share/tomcat8/backup/catalina.properties (No such file or directory)
 !STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="4.4.0.201606070830-r"; osgi.identity="org.eclipse.egit.ui"; singleton:="true" [id=276] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/catalina.properties (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
-Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	... 13 more
-Root exception:
-java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:334)
-	at org.eclipse.osgi.container.Module.start(Module.java:401)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:334)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:411)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:361)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:353)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at org.eclipse.egit.ui.internal.ConfigurationChecker$1.run(ConfigurationChecker.java:45)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:58:21.317
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/context.xml: /usr/share/tomcat8/backup/context.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/context.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:58:21.318
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/server.xml: /usr/share/tomcat8/backup/server.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/server.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:58:21.318
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/tomcat-users.xml: /usr/share/tomcat8/backup/tomcat-users.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/tomcat-users.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2016-08-21 08:58:21.318
+!MESSAGE Error copying file to /usr/share/tomcat8/backup/web.xml: /usr/share/tomcat8/backup/web.xml (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /usr/share/tomcat8/backup/web.xml (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:91)
+	at org.eclipse.jst.server.tomcat.core.internal.FileUtil.copyFile(FileUtil.java:127)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupFolder(TomcatConfiguration.java:125)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatConfiguration.backupAndPublish(TomcatConfiguration.java:95)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishServer(TomcatServerBehaviour.java:238)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:975)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:774)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3172)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:345)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.eclipse.ui.browser 2 0 2016-08-21 05:45:27.918
-!MESSAGE Internal browser is not available: No more handles [Browser style SWT.MOZILLA and Java system property org.eclipse.swt.browser.DefaultType=mozilla are not supported with GTK 3 as XULRunner is not ported for GTK 3 yet]
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-21 05:46:11.811
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-21 05:46:11.844
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-21 05:46:12.194
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
-
-!ENTRY org.eclipse.jface.text 2 0 2016-08-21 05:46:12.195
-!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
-
-!ENTRY org.eclipse.wst.xml.core 4 4 2016-08-21 07:36:38.919
-!MESSAGE Invalid Hierarchy Request
+!ENTRY org.eclipse.jdt.core 4 4 2016-08-21 09:01:14.454
+!MESSAGE Exception while reading /jspdemo/.classpath
 !STACK 0
-org.w3c.dom.DOMException: Invalid Hierarchy Request
-	at org.eclipse.wst.xml.core.internal.document.ElementImpl.insertBefore(ElementImpl.java:746)
-	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertNode(XMLModelParser.java:1360)
-	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertNode(XMLModelParser.java:1334)
-	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertText(XMLModelParser.java:1593)
-	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertStructuredDocumentRegion(XMLModelParser.java:1535)
-	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.replaceStructuredDocumentRegions(XMLModelParser.java:2354)
-	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.nodesReplaced(DOMModelImpl.java:737)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:600)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1198)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1979)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2423)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2408)
-	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
-	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:141)
+java.io.IOException: Bad format
+	at org.eclipse.jdt.internal.core.JavaProject.decodeClasspath(JavaProject.java:916)
+	at org.eclipse.jdt.internal.core.JavaProject.readFileEntriesWithException(JavaProject.java:2498)
+	at org.eclipse.jdt.internal.core.JavaProject.readFileEntries(JavaProject.java:2508)
+	at org.eclipse.jdt.internal.core.JavaProject.readRawClasspath(JavaProject.java:2546)
+	at org.eclipse.jst.common.jdt.internal.javalite.JavaProjectLite.readRawClasspath(JavaProjectLite.java:116)
+	at org.eclipse.jst.j2ee.internal.common.classpath.J2EEComponentClasspathContainerUtils.getInstalledContainerEntry(J2EEComponentClasspathContainerUtils.java:75)
+	at org.eclipse.jst.j2ee.internal.common.classpath.J2EEComponentClasspathContainerUtils.getInstalledContainer(J2EEComponentClasspathContainerUtils.java:42)
+	at org.eclipse.jst.j2ee.internal.common.classpath.J2EEComponentClasspathContainerUtils.getInstalledWebAppLibrariesContainer(J2EEComponentClasspathContainerUtils.java:64)
+	at org.eclipse.jst.j2ee.internal.common.classpath.J2EEComponentClasspathUpdater$ModuleUpdateJob.processModules(J2EEComponentClasspathUpdater.java:374)
+	at org.eclipse.jst.j2ee.internal.common.classpath.J2EEComponentClasspathUpdater$ModuleUpdateJob.access$4(J2EEComponentClasspathUpdater.java:369)
+	at org.eclipse.jst.j2ee.internal.common.classpath.J2EEComponentClasspathUpdater$ModuleUpdateJob$1.run(J2EEComponentClasspathUpdater.java:410)
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
-	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:144)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2368)
-	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
-	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:103)
+	at org.eclipse.jst.j2ee.internal.common.classpath.J2EEComponentClasspathUpdater$ModuleUpdateJob.run(J2EEComponentClasspathUpdater.java:395)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-08-21 09:01:15.364
+!MESSAGE Exception while reading /jspdemo/.classpath
+!STACK 0
+java.io.IOException: Bad format
+	at org.eclipse.jdt.internal.core.JavaProject.decodeClasspath(JavaProject.java:916)
+	at org.eclipse.jdt.internal.core.JavaProject.readFileEntriesWithException(JavaProject.java:2498)
+	at org.eclipse.jdt.internal.core.JavaProject.readFileEntries(JavaProject.java:2508)
+	at org.eclipse.jdt.internal.core.JavaProject.readOutputLocation(JavaProject.java:2526)
+	at org.eclipse.jst.common.jdt.internal.javalite.JavaProjectLite.readOutputLocation(JavaProjectLite.java:148)
+	at org.eclipse.jst.common.jdt.internal.javalite.JavaLiteUtilities.getDefaultJavaOutputContainer(JavaLiteUtilities.java:170)
+	at org.eclipse.jst.common.jdt.internal.javalite.JavaLiteUtilities.getJavaContainers(JavaLiteUtilities.java:121)
+	at org.eclipse.jst.common.jdt.internal.javalite.JavaLiteUtilities.getJavaOutputContainers(JavaLiteUtilities.java:90)
+	at org.eclipse.jst.j2ee.internal.project.J2EEProjectUtilities.getOutputContainers(J2EEProjectUtilities.java:840)
+	at org.eclipse.jst.j2ee.internal.validation.ProjectValidationHelper.getCachedOutputContainers(ProjectValidationHelper.java:52)
+	at org.eclipse.jst.j2ee.internal.validation.ProjectValidationHelper.getOutputContainers(ProjectValidationHelper.java:61)
+	at org.eclipse.wst.validation.internal.ValidatorMetaData.checkIfValidSourceFile(ValidatorMetaData.java:340)
+	at org.eclipse.wst.validation.internal.ValidatorMetaData.isApplicableTo(ValidatorMetaData.java:311)
+	at org.eclipse.wst.validation.internal.ValidatorMetaData.isApplicableTo(ValidatorMetaData.java:302)
+	at org.eclipse.wst.validation.internal.FilterUtil.filterOut(FilterUtil.java:339)
+	at org.eclipse.wst.validation.internal.FilterUtil.filterOut(FilterUtil.java:376)
+	at org.eclipse.wst.validation.internal.FilterUtil$1.visit(FilterUtil.java:575)
+	at org.eclipse.core.internal.resources.Resource$2.visit(Resource.java:120)
+	at org.eclipse.core.internal.resources.Resource$1.visitElement(Resource.java:84)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:82)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:87)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:129)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:52)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:110)
+	at org.eclipse.wst.validation.internal.FilterUtil.loadDeltas(FilterUtil.java:654)
+	at org.eclipse.wst.validation.internal.operations.ValidationOperation.loadFileDeltas(ValidationOperation.java:545)
+	at org.eclipse.wst.validation.internal.operations.ValidationOperation.getFileDeltas(ValidationOperation.java:519)
+	at org.eclipse.wst.validation.internal.operations.ValidationOperation.preValidate(ValidationOperation.java:791)
+	at org.eclipse.wst.validation.internal.operations.ValidationOperation.run(ValidationOperation.java:653)
+	at org.eclipse.wst.validation.internal.operations.ValidationBuilder.performFullBuild(ValidationBuilder.java:264)
+	at org.eclipse.wst.validation.internal.operations.ValidationBuilder.performFullBuild(ValidationBuilder.java:256)
+	at org.eclipse.wst.validation.internal.operations.ValidationBuilder.build(ValidationBuilder.java:182)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
-	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:106)
-	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:103)
-	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1094)
-	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1119)
-	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:625)
-	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:233)
-	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7374)
-	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8225)
-	at org.eclipse.swt.custom.StyledText.doContent(StyledText.java:2530)
-	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:6018)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6049)
-	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5733)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-08-21 09:01:30.930
+!MESSAGE Exception while reading /jspdemo/.classpath
+!STACK 0
+java.io.IOException: Bad format
+	at org.eclipse.jdt.internal.core.JavaProject.decodeClasspath(JavaProject.java:916)
+	at org.eclipse.jdt.internal.core.JavaProject.readFileEntriesWithException(JavaProject.java:2498)
+	at org.eclipse.jdt.internal.core.JavaProject.readFileEntries(JavaProject.java:2508)
+	at org.eclipse.jdt.internal.core.JavaProject.readOutputLocation(JavaProject.java:2526)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.BuildPathsBlock.init(BuildPathsBlock.java:315)
+	at org.eclipse.jdt.internal.ui.preferences.BuildPathsPropertyPage.createWithJava(BuildPathsPropertyPage.java:164)
+	at org.eclipse.jdt.internal.ui.preferences.BuildPathsPropertyPage.createContents(BuildPathsPropertyPage.java:87)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:241)
+	at org.eclipse.jdt.internal.ui.preferences.BuildPathsPropertyPage.createControl(BuildPathsPropertyPage.java:98)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1430)
+	at org.eclipse.jface.preference.PreferenceDialog$9.run(PreferenceDialog.java:1197)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1189)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:608)
+	at org.eclipse.jface.preference.PreferenceDialog$5.lambda$0(PreferenceDialog.java:656)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.preference.PreferenceDialog$5.selectionChanged(PreferenceDialog.java:653)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:878)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:875)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1244)
+	at org.eclipse.jface.viewers.StructuredViewer$5.widgetSelected(StructuredViewer.java:1270)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:265)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:259)
+	at org.eclipse.jface.util.OpenStrategy$1.lambda$1(OpenStrategy.java:431)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4528)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4146)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:157)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
 	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5219)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1366)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1349)
-	at org.eclipse.swt.widgets.Widget.sendIMKeyEvent(Widget.java:1428)
-	at org.eclipse.swt.widgets.Control.gtk_commit(Control.java:3234)
-	at org.eclipse.swt.widgets.Canvas.gtk_commit(Canvas.java:164)
-	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1981)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5819)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5490)
-	at org.eclipse.swt.internal.gtk.OS._gtk_im_context_filter_keypress(Native Method)
-	at org.eclipse.swt.internal.gtk.OS.gtk_im_context_filter_keypress(OS.java:8913)
-	at org.eclipse.swt.widgets.Control.filterKey(Control.java:2557)
-	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3450)
-	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:801)
-	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2000)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5819)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5490)
-	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
-	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9545)
-	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1275)
-	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
-	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2495)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4141)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4553)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4143)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
@@ -905,5 +529,77 @@ org.w3c.dom.DOMException: Invalid Hierarchy Request
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
-=======
->>>>>>> 2f2c8a6830fdb00e3304d473f9dfcbf632417e31
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-08-21 09:01:30.951
+!MESSAGE Exception while reading /jspdemo/.classpath
+!STACK 0
+java.io.IOException: Bad format
+	at org.eclipse.jdt.internal.core.JavaProject.decodeClasspath(JavaProject.java:916)
+	at org.eclipse.jdt.internal.core.JavaProject.readFileEntriesWithException(JavaProject.java:2498)
+	at org.eclipse.jdt.internal.core.JavaProject.readFileEntries(JavaProject.java:2508)
+	at org.eclipse.jdt.internal.core.JavaProject.readRawClasspath(JavaProject.java:2546)
+	at org.eclipse.jdt.internal.ui.wizards.buildpaths.BuildPathsBlock.init(BuildPathsBlock.java:317)
+	at org.eclipse.jdt.internal.ui.preferences.BuildPathsPropertyPage.createWithJava(BuildPathsPropertyPage.java:164)
+	at org.eclipse.jdt.internal.ui.preferences.BuildPathsPropertyPage.createContents(BuildPathsPropertyPage.java:87)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:241)
+	at org.eclipse.jdt.internal.ui.preferences.BuildPathsPropertyPage.createControl(BuildPathsPropertyPage.java:98)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1430)
+	at org.eclipse.jface.preference.PreferenceDialog$9.run(PreferenceDialog.java:1197)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1189)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:608)
+	at org.eclipse.jface.preference.PreferenceDialog$5.lambda$0(PreferenceDialog.java:656)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.preference.PreferenceDialog$5.selectionChanged(PreferenceDialog.java:653)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:878)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:875)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1244)
+	at org.eclipse.jface.viewers.StructuredViewer$5.widgetSelected(StructuredViewer.java:1270)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:265)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:259)
+	at org.eclipse.jface.util.OpenStrategy$1.lambda$1(OpenStrategy.java:431)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4528)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4146)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:157)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5219)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4553)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4143)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+
+!ENTRY org.eclipse.ui.browser 2 0 2016-08-21 09:07:27.549
+!MESSAGE Internal browser is not available: No more handles [Browser style SWT.MOZILLA and Java system property org.eclipse.swt.browser.DefaultType=mozilla are not supported with GTK 3 as XULRunner is not ported for GTK 3 yet]
