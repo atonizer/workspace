@@ -9,11 +9,8 @@
 <body>
 	<p>
 		Converting string to uppercase with .toUpperCase():
-<<<<<<< HEAD
+
 		<%=new String("Hello Java").toUpperCase()%></p>		
-=======
-		<%=new String("Hello Java").toUpperCase()%></p>
->>>>>>> 2f2c8a6830fdb00e3304d473f9dfcbf632417e31
 	<br />
 	<p>
 		25 multiplied by 4 equals

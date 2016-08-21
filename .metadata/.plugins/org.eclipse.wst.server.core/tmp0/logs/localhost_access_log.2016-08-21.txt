@@ -2,3 +2,17 @@
 127.0.0.1 - - [21/Aug/2016:09:07:27 -0400] "GET / HTTP/1.1" 404 1012
 127.0.0.1 - - [21/Aug/2016:09:07:33 -0400] "GET /jspdemo/student-dropdown-form.html HTTP/1.1" 304 -
 127.0.0.1 - - [21/Aug/2016:09:07:47 -0400] "GET /jspdemo/student-dropdown-response.jsp?firstName=John&lastName=Doe&nationality=andorran HTTP/1.1" 200 337
+127.0.0.1 - - [21/Aug/2016:12:28:23 -0400] "GET / HTTP/1.1" 404 1012
+127.0.0.1 - - [21/Aug/2016:12:28:28 -0400] "GET /jspdemo/todo-demo.jsp HTTP/1.1" 200 543
+127.0.0.1 - - [21/Aug/2016:12:28:28 -0400] "GET /favicon.ico HTTP/1.1" 404 1034
+127.0.0.1 - - [21/Aug/2016:12:28:28 -0400] "GET /favicon.ico HTTP/1.1" 404 1034
+127.0.0.1 - - [21/Aug/2016:12:28:47 -0400] "GET /jspdemo/todo-demo.jsp?theItem=Go+to+store HTTP/1.1" 200 550
+127.0.0.1 - - [21/Aug/2016:12:28:52 -0400] "GET /jspdemo/todo-demo.jsp?theItem= HTTP/1.1" 200 539
+127.0.0.1 - - [21/Aug/2016:12:29:33 -0400] "GET /jspdemo/todo-demo.jsp HTTP/1.1" 200 543
+127.0.0.1 - - [21/Aug/2016:12:32:21 -0400] "GET /scrape?info_hash=u%e8%f54%ef%c8%a5%d2%afRR%e0%5d%86d%b6%d4%d9f%ce HTTP/1.1" 404 1024
+127.0.0.1 - - [21/Aug/2016:12:33:51 -0400] "GET /scrape.php?info_hash=%bd%b4%1c%02%2a%c0%a4p%9f%c3%28%3f%e2%a2%14%fd%d96%ff%d7 HTTP/1.1" 404 1032
+127.0.0.1 - - [21/Aug/2016:12:51:29 -0400] "GET /jspdemo/todo-demo.jsp HTTP/1.1" 500 2650
+127.0.0.1 - - [21/Aug/2016:12:53:49 -0400] "GET /jspdemo/todo-demo.jsp HTTP/1.1" 200 572
+127.0.0.1 - - [21/Aug/2016:12:54:20 -0400] "GET /jspdemo/todo-demo.jsp?theItem=Go+to+store HTTP/1.1" 200 593
+127.0.0.1 - - [21/Aug/2016:12:54:49 -0400] "GET /jspdemo/todo-demo.jsp?theItem=Mow+a+yard HTTP/1.1" 200 613
+127.0.0.1 - - [21/Aug/2016:12:55:01 -0400] "GET /jspdemo/todo-demo.jsp?theItem=Wash+the+dishes HTTP/1.1" 200 638
