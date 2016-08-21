@@ -9,7 +9,11 @@
 <body>
 <%
 	for(int i=1; i<=5; i++){
+<<<<<<< HEAD
 		out.println("<br/>Hello from the scriplet: " + i + " time!");		
+=======
+		out.println("<br/>Hello from the scriplet: " + i + " time!");
+>>>>>>> 2f2c8a6830fdb00e3304d473f9dfcbf632417e31
 	}
 %>
 

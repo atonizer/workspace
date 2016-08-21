@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="ResourceNavigator">
-		<item value="Aggregate for window 1471454628526" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
-		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
-	</section>
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Projects\workspace\LoginProject"/>
+		<item value="C:\Projects\workspace\jspdemo"/>
+	</list>
 </section>

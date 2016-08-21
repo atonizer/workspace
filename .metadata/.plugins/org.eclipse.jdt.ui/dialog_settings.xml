@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
 	<section name="RefactoringWizard.preview">
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
@@ -31,6 +32,8 @@
 	</section>
 	<section name="completion_proposal_size">
 	</section>
+=======
+>>>>>>> 2f2c8a6830fdb00e3304d473f9dfcbf632417e31
 	<section name="JavaElementSearchActions">
 	</section>
 </section>

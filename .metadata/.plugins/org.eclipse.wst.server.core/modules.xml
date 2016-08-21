@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
+<<<<<<< HEAD
   <module moduleId="org.eclipse.jst.jee.server:jspdemo" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:testProject" serverId="Tomcat v8.0 Server at localhost"/>
+=======
+  <module moduleId="org.eclipse.jst.jee.server:LoginProject" serverId="Tomcat v8.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:jspdemo" serverId="Tomcat v8.0 Server at localhost"/>
+>>>>>>> 2f2c8a6830fdb00e3304d473f9dfcbf632417e31
 </modules>
