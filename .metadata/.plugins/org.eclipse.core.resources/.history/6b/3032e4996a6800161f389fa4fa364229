@@ -1,0 +1,9 @@
+package edu.javalearn.jsp.tagdemo;
+
+public class Student {
+	
+	private String firstName;
+	private String lastName;
+	private boolean goldCustomer;
+
+}
