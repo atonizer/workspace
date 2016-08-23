@@ -1,0 +1,16 @@
+
+public class Demo {
+	public static void main(String[] args) {
+		try {
+			int x = Integer.parseInt("foo");
+			System.out.println(x);
+		} 
+		
+		catch (NumberFormatException e) {
+			System.out.println("Not a number!");
+		}
+		
+		System.out.println("Some other staff");
+		
+	}
+}

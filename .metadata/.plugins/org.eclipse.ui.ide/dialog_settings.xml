@@ -3,4 +3,8 @@
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
 		<item value="/home/user/Projects/workspace/jspdemo"/>
 	</list>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1471794919574" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
 </section>

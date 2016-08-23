@@ -1,0 +1,6 @@
+
+public class Demo {
+	public static void exceptionExample() {
+		int x = Integer.parseInt("foo");
+	}
+}

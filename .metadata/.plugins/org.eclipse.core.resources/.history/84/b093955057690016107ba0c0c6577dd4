@@ -1,0 +1,15 @@
+
+public class Demo {
+	public static void main(String[] args) {
+		try {
+			int x = Integer.parseInt("foo");
+			System.out.println(x);
+		} 
+		catch (Throwable e) {
+			System.out.println("Something bad happened!");
+		}
+		catch (NumberFormatException e) {
+			System.out.println("Not a number!");
+		}
+	}
+}
