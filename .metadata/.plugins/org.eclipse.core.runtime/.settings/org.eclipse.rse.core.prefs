@@ -1,3 +1,4 @@
+activeuserprofiles=DESKTOP-LUKDURH;Team;system
 eclipse.preferences.version=1
-org.eclipse.rse.systemtype.local.systemType.defaultUserId=user
-useridperkey=system.Local\=user;
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=User
+useridperkey=DESKTOP-LUKDURH.Local\=User;system.Local\=User;
