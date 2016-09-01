@@ -1,0 +1,12 @@
+package test;
+
+public class AccountTest {
+
+	public static void main(String[] args) 
+	{
+		Account account1 = new Account("John Doe");
+		Account account2 = new Account("Jane Doe");
+
+	}
+
+}

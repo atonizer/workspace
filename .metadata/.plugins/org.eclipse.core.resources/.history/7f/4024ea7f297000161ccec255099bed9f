@@ -14,17 +14,6 @@ public class Account
 			this.balance = balance;
 	}
 	
-	public void deposit(double depositAmount)
-	{
-		if(depositAmount > 0.0)
-			balance = balance + depositAmount;
-	}
-	
-	public double getBalance()
-	{
-		return balance;
-	}
-	
 	// method to set the name
 	public void setName(String name) 
 	{
@@ -35,6 +24,10 @@ public class Account
 	public String getName() 
 	{
 		return name;
-	}	
+	}
 	
+	public double getBalance()
+	{
+		this.balance = balance;
+	}
 } // end class Account

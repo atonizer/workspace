@@ -20,11 +20,6 @@ public class Account
 			balance = balance + depositAmount;
 	}
 	
-	public double getBalance()
-	{
-		return balance;
-	}
-	
 	// method to set the name
 	public void setName(String name) 
 	{
